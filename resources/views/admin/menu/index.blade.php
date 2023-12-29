@@ -46,7 +46,10 @@
                                 <a href="{{ route('menu.edit',$menu->id) }}"
                                     class="btn btn-success mx-1 rounded-1">Edit Discount</a>
                                 </td>
-                               
+                                <td>
+                                    <a href="{{ route('menu.show',$menu->id) }}"
+                                        class="btn btn-success mx-1 rounded-1">show Discount</a>
+                                    </td>
                             </tr>
                             @empty
                              No SubCategory Found   

@@ -20,7 +20,7 @@ class MenuApiController extends Controller
 
  
   
-        private  $menuService;
+       private  $menuService;
     
 
         public function __construct(MenuService $menuService)
@@ -35,6 +35,7 @@ class MenuApiController extends Controller
         {
 
             $menu = $this->menuService->getMenuWithDiscounts($menu);
+            
             return new MenuResources($menu);
 
         }

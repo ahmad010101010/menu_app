@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreDiscountRequest extends FormRequest
+class StoreMenuRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -15,13 +15,14 @@ class StoreDiscountRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to sthe request.
+     * Get the validation rules that apply to the request.
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
+            'name' => 'SomeTimes|string|max:255',
             'discount' => 'nullable|numeric|min:0|max:100',
         ];
     }
